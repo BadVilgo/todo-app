@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Checkbox = ({ index, onToggle }) => {
-  const handleCheckboxChange = () => {
-    onToggle(index);
-  };
-
+const Checkbox = ({ index, checked, onToggle }) => {
   return (
     <input
       type="checkbox"
-      className="list-element-checkbox form-check-input"
-      onChange={handleCheckboxChange}
+      className="form-check-input ml-1"
+      checked={checked}
+      onChange={() => onToggle(index)}
     />
   );
 };

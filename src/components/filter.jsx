@@ -1,40 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Filter = ({ array }) => {
-  const listElements = document.getElementsByClassName("list-element");
-  const notReadyTasks = () => {
-    console.log(listElements);
-
-    Array.from(listElements).forEach((element) => {
-      if (element.classList.contains("line-through")) {
-        element.classList.add("hidden");
-      }
-    });
-
-    console.log(array);
-  };
-
-  const AllTasks = () => {
-    Array.from(listElements).forEach((element) => {
-      if (element.classList.contains("line-through")) {
-        element.classList.remove("hidden");
-      }
-    });
-  };
-
+const Filter = ({ filterStatus, setFilterStatus }) => {
   return (
-    <div>
+    <div className="btn-group">
       <button
-        className="not-rdy-tasks btn btn-secondary m-1 shadow"
-        onClick={notReadyTasks}
+        className={`btn ${
+          filterStatus === "all" ? "btn-primary" : "btn-outline-primary"
+        }`}
+        onClick={() => setFilterStatus("all")}
       >
-        NOT READY TASKS
+        All Tasks
       </button>
       <button
-        className="all-tasks btn btn-secondary m-1 shadow"
-        onClick={AllTasks}
+        className={`btn ${
+          filterStatus === "notReady" ? "btn-primary" : "btn-outline-primary"
+        }`}
+        onClick={() => setFilterStatus("notReady")}
       >
-        ALL TASKS
+        Not Completed
       </button>
     </div>
   );

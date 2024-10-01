@@ -1,7 +1,12 @@
-.line-through {
+.completed {
   text-decoration: line-through;
+  color: #6c757d;
 }
 
-.hidden {
-  display: none;
+.list-group-item {
+  font-size: 1.1rem;
+}
+
+.btn-group .btn {
+  min-width: 120px;
 }
