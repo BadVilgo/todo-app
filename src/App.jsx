@@ -8,7 +8,6 @@ const App = () => {
   const [checkedStatus, setCheckedStatus] = useState(array.map(() => false));
 
   const handleToggle = (index) => {
-    // Toggle the checked status for the given index
     const updatedStatus = [...checkedStatus];
     updatedStatus[index] = !updatedStatus[index];
     setCheckedStatus(updatedStatus);
@@ -30,7 +29,7 @@ const App = () => {
     let task = document.getElementsByClassName("inputValue")[0].value;
     if (task) {
       setArray([...array, task]);
-      setCheckedStatus([...checkedStatus, false]); // Add new item as unchecked
+      setCheckedStatus([...checkedStatus, false]);
     }
   };
 
@@ -40,7 +39,7 @@ const App = () => {
       <p className="">Add a new task: </p>
       <input className="inputValue" type="text" />
       <button className="btn btn-primary mt-2 shadow" onClick={addTask}>
-        Add new task
+        ADD TASK
       </button>
       <div className="d-flex mt-5 align-items-center">
         <p className="mr-2 mb-0">Show: </p>
@@ -52,14 +51,3 @@ const App = () => {
 };
 
 export default App;
-
-// EVENT LISTENER
-// checkmark checked === add className "line-through"
-
-//SET STATUS
-// if li className != "line-through" setStatus active
-// else setStatus inactive
-
-// show ALL TASKS vs SHOW NOT DONE TASKS
-// onClick btn "ALL TASKS" show all tasks | display != none
-// onClick btn "ACTIVE TASKS" show only active tasks, other display: none;
