@@ -1,3 +1,9 @@
+API key: 46199520-b529d83a287e1a6d35b39fd0f
+https://pixabay.com/api/?key=46199520-b529d83a287e1a6d35b39fd0f&q=yellow+flowers&image_type=photo&pretty=true
+
+FAKE API:
+https://jsonplaceholder.typicode.com/todos
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
